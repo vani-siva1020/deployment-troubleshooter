@@ -24,5 +24,6 @@ jobs:
           find . -name "*.java" > sources.txt
           javac @sources.txt
 
-      - name: Run (optional)
-        run: echo "Java build successful"
+      - name: Build Success
+        run: echo "Build completed successfully"
+         
