@@ -1,6 +1,8 @@
-INFO Application Started
-ERROR DB_URL missing
-INFO Connecting Database
-ERROR API_KEY missing
-ERROR DB_URL missing
-ERROR Docker Pull Failed
+INFO Application started
+INFO Connecting to DB
+ERROR Docker Pull Failed at line 6
+WARN Retry attempt 1
+ERROR API_KEY missing in environment
+INFO Loading config file
+ERROR DB_URL missing in application.properties
+INFO Deployment stopped
