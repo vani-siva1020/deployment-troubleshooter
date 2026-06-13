@@ -7,11 +7,9 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -22,7 +20,9 @@ jobs:
           java-version: '17'
 
       - name: Compile Java Files
-        run: javac src/*.java
+        run: |
+          find . -name "*.java" > sources.txt
+          javac @sources.txt
 
-      - name: Verify Compilation
-        run: echo "Build Successful"
+      - name: Run (optional)
+        run: echo "Java build successful"
