@@ -1,1 +1,6 @@
-
+INFO Application Started
+ERROR DB_URL missing
+INFO Connecting Database
+ERROR API_KEY missing
+ERROR DB_URL missing
+ERROR Docker Pull Failed
