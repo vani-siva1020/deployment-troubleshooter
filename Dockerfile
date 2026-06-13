@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN find . -name "*.java" > sources.txt && javac @sources.txt
+RUN javac Main.java
 
 CMD ["java", "Main"]
