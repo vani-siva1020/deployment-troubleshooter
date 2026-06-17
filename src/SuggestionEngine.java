@@ -38,6 +38,46 @@ public class SuggestionEngine {
             return "Check Docker credentials";
         }
 
-        return "No suggestion available";
+        else if(error.equals("Git authentication failed")) {
+            return "Check Git credentials or access token";
+        }
+
+        else if(error.equals("Port already in use")) {
+            return "Stop the process using the port or change the port";
+        }
+
+        else if(error.equals("JWT_SECRET missing")) {
+            return "Configure JWT_SECRET environment variable";
+        }
+
+        else if(error.equals("Database connection failed")) {
+            return "Verify database URL, username and password";
+        }
+
+        else if(error.equals("Jenkins agent disconnected")) {
+            return "Check Jenkins agent status and network connectivity";
+        }
+
+        else if(error.equals("SonarQube quality gate failed")) {
+            return "Review code quality issues in SonarQube";
+        }
+
+        else if(error.equals("Docker daemon not running")) {
+            return "Start Docker Desktop or Docker service";
+        }
+
+        else if(error.equals("Kubernetes pod crashloopbackoff")) {
+            return "Check pod logs and application startup errors";
+        }
+
+        else if(error.equals("Resource quota exceeded")) {
+            return "Increase cluster resources or optimize workload";
+        }
+
+        else if(error.equals("Connection timeout")) {
+            return "Verify network connectivity and firewall rules";
+        }
+
+        return "Investigate log manually";
     }
 }
