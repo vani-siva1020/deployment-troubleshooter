@@ -1,6 +1,21 @@
-INFO Application Started
-ERROR DB_URL missing
-INFO Connecting Database
-ERROR API_KEY missing
-ERROR DB_URL missing
-ERROR Docker Pull Failed
+INFO CI Pipeline Started
+INFO Cloning Repository
+INFO Maven Build Started
+ERROR Maven dependency not found
+ERROR Maven dependency not found
+WARNING Deprecated plugin detected
+INFO Running Unit Tests
+ERROR Test cases failed
+ERROR Test cases failed
+INFO Code Quality Check
+WARNING SonarQube quality gate failed
+INFO Building Docker Image
+ERROR Docker build failed
+ERROR Docker registry authentication failed
+INFO Deploying to Kubernetes
+ERROR Kubernetes deployment failed
+ERROR Kubernetes deployment failed
+WARNING Resource quota exceeded
+INFO Sending Notifications
+ERROR Slack webhook failed
+INFO Pipeline Aborted
