@@ -23,6 +23,8 @@ public class Main {
             for(String error : result.keySet()) {
 
                 System.out.println("Error : " + error);
+                System.out.println("Count : "
+        + result.get(error).size());
 
                 System.out.println("Lines : "
                         + result.get(error));
