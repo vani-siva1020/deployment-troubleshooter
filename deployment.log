@@ -21,3 +21,9 @@ WARNING Resource quota exceeded
 INFO Sending Notifications
 ERROR Slack webhook failed
 INFO Deployment Failed
+ERROR: Database connection failed
+CrashLoopBackOff
+ImagePullBackOff
+JWT_SECRET missing
+OOMKilled
+ErrImagePull
