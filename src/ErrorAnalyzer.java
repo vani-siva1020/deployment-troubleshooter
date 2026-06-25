@@ -60,27 +60,27 @@ if(line.contains("ErrImagePull")) {
             .add(i + 1);
 }
             if(line.contains("CrashLoopBackOff")) {
-    map.putIfAbsent("CrashLoopBackOff",
+    errorMap.putIfAbsent("CrashLoopBackOff",
             new ArrayList<>());
-    map.get("CrashLoopBackOff").add(i + 1);
+     errorMap.get("CrashLoopBackOff").add(i + 1);
 }
 
 if(line.contains("ImagePullBackOff")) {
-    map.putIfAbsent("ImagePullBackOff",
+     errorMap.putIfAbsent("ImagePullBackOff",
             new ArrayList<>());
-    map.get("ImagePullBackOff").add(i + 1);
+     errorMap.get("ImagePullBackOff").add(i + 1);
 }
 
 if(line.contains("OOMKilled")) {
-    map.putIfAbsent("OOMKilled",
+    errorMap.putIfAbsent("OOMKilled",
             new ArrayList<>());
-    map.get("OOMKilled").add(i + 1);
+   errorMap.get("OOMKilled").add(i + 1);
 }
 
 if(line.contains("ErrImagePull")) {
-    map.putIfAbsent("ErrImagePull",
+     errorMap.putIfAbsent("ErrImagePull",
             new ArrayList<>());
-    map.get("ErrImagePull").add(i + 1);
+   errorMap.get("ErrImagePull").add(i + 1);
 }
         }
 
