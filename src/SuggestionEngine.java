@@ -77,6 +77,21 @@ public class SuggestionEngine {
         else if(error.equals("Connection timeout")) {
             return "Verify network connectivity and firewall rules";
         }
+        if(error.equals("CrashLoopBackOff")) {
+    return "Check application startup logs and health probes";
+}
+
+if(error.equals("ImagePullBackOff")) {
+    return "Verify image name and registry credentials";
+}
+
+if(error.equals("OOMKilled")) {
+    return "Increase container memory limits";
+}
+
+if(error.equals("ErrImagePull")) {
+    return "Check image repository and tag";
+}
 
         return "Investigate log manually";
     }
