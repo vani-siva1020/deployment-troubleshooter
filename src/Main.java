@@ -6,11 +6,17 @@ public class Main {
 
         try {
 
-            LogReader reader = new LogReader();
+           Scanner sc = new Scanner(System.in);
 
-            List<String> logs =
-                    reader.readLogs("deployment.log");
+System.out.println("Enter Pod Name:");
 
+String podName = sc.nextLine();
+
+KubernetesLogFetcher fetcher =
+        new KubernetesLogFetcher();
+
+List<String> logs =
+        fetcher.fetchLogs(podName);
             ErrorAnalyzer analyzer =
                     new ErrorAnalyzer();
 
