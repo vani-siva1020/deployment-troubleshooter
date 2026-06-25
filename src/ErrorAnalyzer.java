@@ -25,6 +25,41 @@ public class ErrorAnalyzer {
                         .add(i + 1);
             }
             if(line.contains("CrashLoopBackOff")) {
+    errorMap.putIfAbsent(
+            "CrashLoopBackOff",
+            new ArrayList<>());
+    errorMap.get(
+            "CrashLoopBackOff")
+            .add(i + 1);
+}
+
+if(line.contains("ImagePullBackOff")) {
+    errorMap.putIfAbsent(
+            "ImagePullBackOff",
+            new ArrayList<>());
+    errorMap.get(
+            "ImagePullBackOff")
+            .add(i + 1);
+}
+
+if(line.contains("OOMKilled")) {
+    errorMap.putIfAbsent(
+            "OOMKilled",
+            new ArrayList<>());
+    errorMap.get(
+            "OOMKilled")
+            .add(i + 1);
+}
+
+if(line.contains("ErrImagePull")) {
+    errorMap.putIfAbsent(
+            "ErrImagePull",
+            new ArrayList<>());
+    errorMap.get(
+            "ErrImagePull")
+            .add(i + 1);
+}
+            if(line.contains("CrashLoopBackOff")) {
     map.putIfAbsent("CrashLoopBackOff",
             new ArrayList<>());
     map.get("CrashLoopBackOff").add(i + 1);
